@@ -15,7 +15,7 @@ func TestJAChrome144(t *testing.T) {
 	t.Parallel()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		Build().Unwrap()
 
 	if client == nil {
@@ -420,7 +420,7 @@ func TestJAMultipleCalls(t *testing.T) {
 	defer ts.Close()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		JA().Firefox147().
 		Build().Unwrap()
 
@@ -449,7 +449,7 @@ func TestJAWithHTTP2(t *testing.T) {
 	t.Parallel()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		HTTP2Settings().
 		HeaderTableSize(65536).
 		EnablePush(1).
@@ -496,7 +496,7 @@ func TestJARoundTripperHTTP1(t *testing.T) {
 	defer ts.Close()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		Build().Unwrap()
 
 	req := client.Get(g.String(ts.URL))
@@ -523,7 +523,7 @@ func TestJACloseIdleConnections(t *testing.T) {
 	defer ts.Close()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		Build().Unwrap()
 
 	req := client.Get(g.String(ts.URL))

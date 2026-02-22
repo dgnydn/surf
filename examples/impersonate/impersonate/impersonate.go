@@ -45,8 +45,8 @@ func main() {
 		Unwrap()
 
 	r := cli.
-		// Get(url).
-		Post(url).Body(g.String("test").Encode().JSON().Ok()).
+		Get(url).
+		// Post(url).Body(g.String("test").Encode().JSON().Ok()).
 		Do()
 
 	if r.IsErr() {

@@ -125,7 +125,7 @@ func TestTLSGrabberWithJA3(t *testing.T) {
 	defer ts.Close()
 
 	client := surf.NewClient().Builder().
-		JA().Chrome144().
+		JA().Chrome145().
 		Build().Unwrap()
 
 	if client == nil {

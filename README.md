@@ -16,7 +16,7 @@
 ## ✨ Key Features
 
 ### 🎭 **Browser Impersonation**
-- **Chrome & Firefox Support**: Accurately mimic Chrome v144 and Firefox v147 browser fingerprints
+- **Chrome & Firefox Support**: Accurately mimic Chrome v145 and Firefox v147 browser fingerprints
 - **Platform Diversity**: Impersonate Windows, macOS, Linux, Android, and iOS devices
 - **TLS Fingerprinting**: Full JA3/JA4 fingerprint customization for enhanced privacy
 - **Automatic Headers**: Proper header ordering and browser-specific values
@@ -143,7 +143,7 @@ if resp.IsOk() {
 client := surf.NewClient().
     Builder().
     Impersonate().
-    Chrome().        // Latest Chrome v144
+    Chrome().        // Latest Chrome v145
     Build().
     Unwrap()
 

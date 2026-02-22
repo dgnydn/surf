@@ -49,7 +49,7 @@ func (im *Impersonate) IOS() *Impersonate {
 	return im
 }
 
-// Chrome impersonates Chrome browser v144.
+// Chrome impersonates Chrome browser v145.
 func (im *Impersonate) Chrome() *Builder {
 	im.builder.browser = chromeBrowser
 
@@ -57,14 +57,14 @@ func (im *Impersonate) Chrome() *Builder {
 	// "ja3_hash": "random",
 	// "ja4": "t13d1516h2_8daaf6152771_d8a2da3f94cd",
 	// "ja4_r": "t13d1516h2_002f,0035,009c,009d,1301,1302,1303,c013,c014,c02b,c02c,c02f,c030,cca8,cca9_0005,000a,000b,000d,0012,0017,001b,0023,002b,002d,0033,44cd,fe0d,ff01_0403,0804,0401,0503,0805,0501,0806,0601",
-	// "akamai": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
-	// "akamai_hash": "52d84b11737d980aef856699f885ca86",
 	// "peetprint": "GREASE-772-771|2-1.1|GREASE-4588-29-23-24|1027-2052-1025-1283-2053-1281-2054-1537|1|2|GREASE-4865-4866-4867-49195-49199-49196-49200-52393-52392-49171-49172-156-157-47-53|0-10-11-13-16-17613-18-23-27-35-43-45-5-51-65037-65281-GREASE-GREASE",
-	// "peetprint_hash": "1d4ffe9b0e34acac0bd883fa7f79d7b5"
+	// "peetprint_hash": "1d4ffe9b0e34acac0bd883fa7f79d7b5",
+	// "akamai_fingerprint": "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p",
+	// "akamai_fingerprint_hash": "52d84b11737d980aef856699f885ca86",
 
 	im.builder.
 		Boundary(chrome.Boundary).
-		JA().Chrome144().
+		JA().Chrome145().
 		HTTP2Settings().
 		HeaderTableSize(65536).
 		EnablePush(0).

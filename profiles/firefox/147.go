@@ -264,7 +264,7 @@ var HelloFirefoxPrivate_147 = utls.ClientHelloSpec{
 	},
 }
 
-var HelloFirefox_147QUICS = utls.ClientHelloSpec{
+var HelloFirefox_147_QUIC = utls.ClientHelloSpec{
 	CipherSuites: []uint16{
 		utls.TLS_AES_128_GCM_SHA256,
 		utls.TLS_CHACHA20_POLY1305_SHA256,
